@@ -1,0 +1,67 @@
+using System;
+
+namespace Brackey_Tutorial___E02
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Title = "Tutorial E02";
+
+
+            // Folge E02 - Variables
+
+            Console.WriteLine("What is your name?");
+
+            string userName = Console.ReadLine();
+
+            Console.WriteLine("Hello " + userName + ", nice to meet you!");
+
+            // fucking MATHE!
+
+            double num01;
+            double num02;
+
+            Console.Write("Input first number: ");
+            num01 = Convert.ToDouble ( Console.ReadLine() );
+
+            Console.Write("Input second number: ");
+            num02 = Convert.ToDouble ( Console.ReadLine() );
+
+            double result1 = num01 * num02;
+
+            Console.Write("The result is " + result1);
+
+            // Challenge zu E02: Durchschnitt von 3 Zahlen
+
+            double num11;
+            double num22;
+            double num33;
+            
+
+            Console.Write("\n \nHallo! Gib drei Zahlen ein und ich sage dir den Durchschnitt!\nLos geht's!");
+
+
+            Console.Write("Gib die erste Zahl ein: ");
+            num11 = Convert.ToDouble( Console.ReadLine() );
+
+            Console.Write("\nSuper!\nJetzt Zahl Nummer Zwei: ");
+            num22 = Convert.ToDouble( Console.ReadLine() );
+
+            Console.Write("\nFast geschafft!\nJetzt Zahl Nummer Drei: ");
+            num33 = Convert.ToDouble( Console.ReadLine() );
+
+            double result2 = (num11 + num22 + num33) / 3;
+
+            Console.Write("Der Durchschnitt, der von dir eingegebenen Zahlen, beträgt exakt: " + result2);
+
+
+            Console.ReadKey();
+
+
+
+
+        }
+    }
+}
