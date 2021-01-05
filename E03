@@ -1,0 +1,145 @@
+using System;
+
+namespace Brackey_Tutorial___E03
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Ein Ticket kaufen, if/else if/ else
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Title = "Tutorial E03";
+
+            Console.WriteLine("Welcome! Tickets are 5Euro. Please insert cash!");
+
+            int cash = Convert.ToInt32( Console.ReadLine() );
+
+            if (cash < 5)
+            {
+                Console.WriteLine("That's not enough money!");
+            }
+            
+            else if (cash == 5)
+            {
+                Console.WriteLine("Here is your ticket.");
+            }
+
+            else
+            {
+                int change = cash -5;
+                Console.WriteLine("Here is your ticket and " + change + "Euro change.");
+            }
+            
+            // Achterbahn fahren - Größe/Alter
+
+            int age;
+            int height;
+
+            Console.Write("Please input age: ");
+            age = Convert.ToInt32( Console.ReadLine() );
+
+            Console.Write("Please input height (cm): ");
+            height = Convert.ToInt32 ( Console.ReadLine() );
+
+
+            // das && sorgt dafür, das im if statement beide gegebenheiten gleichzeit gecheckt werden
+            // Mit || (ALT GR + taste neben Shift) muss nur EINS von den statements zutreffen
+            if (age >= 18 && height >= 160) 
+            {
+                Console.WriteLine("You can enter!");
+            }
+
+            else
+            {
+                Console.WriteLine("You don't meet the requirements");
+            }
+
+
+            // switch funktion
+            // statt mehrere if/if else-Schleifen, einfach switch benutzen und dann "fälle"/cases angeben
+            // Gleiche Menge/Platz, lässt sich deutlich besser lesen
+
+            Console.WriteLine("Input a number between 1 and 5: ");
+            int num = Convert.ToInt32( Console.ReadLine() );
+
+            switch (num)
+            {
+                case 1:
+                    Console.WriteLine("One");
+                    break;                      // break sorgt dafür, das sie Schleife nach dem case beendet wird
+                
+                case 2:
+                    Console.WriteLine("Two");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Three");
+                    break;
+
+                case 4:
+                    Console.WriteLine("Four");
+                    break;
+
+                case 5:
+                    Console.WriteLine("Five");
+                    break;
+
+                default:                        // Default ist für alle nicht angegebenen Fälle, zB die Zahl Sieben
+                    Console.WriteLine("Default");
+                    break;
+            }
+
+            // Challenge: Spieler muss Mathefragen korrekt beantworten
+
+            int solution1;
+            int solution2;
+            int solution3;
+
+            
+
+            Console.WriteLine("\nHallo! Hier musst du kleine Matheaufgaben lösen. Viel Erfolg!\n");
+            Console.WriteLine("5 + 15:");
+            solution1 = Convert.ToInt32( Console.ReadLine() );
+
+
+            if (solution1 == 20)
+            {
+                Console.WriteLine("\nRichtig! Nächste Aufgabe!");
+            }
+            
+            else
+            {
+                Console.WriteLine("\nLeider falsch. Nächste Aufgabe!");
+            }
+
+            Console.WriteLine("538 * 2:");
+            solution2 = Convert.ToInt32( Console.ReadLine() );
+
+            if (solution2 == 1076)
+            {
+                Console.WriteLine("\nRichtig! Nächste Aufgabe!");
+            }
+
+            else
+            {
+                Console.WriteLine("\nLeider falsch. Nächste Aufgabe!");
+            }
+
+            Console.WriteLine("Letzte Aufgabe!\n2+2:");
+            solution3 = Convert.ToInt32( Console.ReadLine() );
+
+            if (solution3 == 4)
+            {
+                Console.WriteLine("\nRichtig! Challenge beendet.");
+            }
+
+            else
+            {
+                Console.WriteLine("\nLeider falsch! Challenge beendet.");
+            }
+
+            // Die Lösung von Brackeys sieht vor, vor jeder Schleife die gleiche Variable neu zu besetzen. Also quasi so wie hier im Code, nur nicht mit drei verschiedenen variablen. 
+            Console.ReadKey();
+        }  
+    }
+}
