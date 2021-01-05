@@ -1,0 +1,28 @@
+using System;
+
+namespace Brackey_Tutorial
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // Folge E01 - Basics
+            
+            Console.WindowHeight = 40;
+            Console.Title = "Tutorial E01";
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.BackgroundColor = ConsoleColor.White;
+
+            Console.WriteLine("Interessanter Text.");
+            Console.ReadLine();
+            Console.Write("Ebenfalls interessanter Text.\nInteressanter Text auf neuer Zeile.");
+
+
+            
+
+            Console.Write("\n\n\nBitte drücke eine beliebige Taste, um das Fenster zu schließen!");
+            Console.ReadKey();
+        }
+    }
+}
