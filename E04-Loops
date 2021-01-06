@@ -1,0 +1,72 @@
+using System;
+
+namespace E04
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Tutorial E04 - Loops";
+
+            //es gibt zwei arten loops: for und while
+
+            //for startet den loop
+            //zuerst was VOR dem loop passiert, hier: int i definieren
+            //danach, nach ";", die condition um den loop am laufen zu halten, hier: solange i weniger als 10
+            //zum schluss, was nach jedem loop passiert,hier:i um eins erhöhen
+            
+            Console.WriteLine("Erste Schleife:");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write(i + 1);
+            }
+
+
+            Console.WriteLine("\n\nZweite Schleife:");
+            for (int x = 0; x < 10; x++)
+            {
+                Console.WriteLine(x + 1);
+            }
+
+            Console.WriteLine("\n\nDritte Schleife:");
+
+            //Dies ist eine Variation der zweiten Schleife, im ersten Bereich wird der Start festgelegt
+            for (int y = 1; y <= 10; y++)
+            {
+                Console.Write(y);
+            }
+
+            Console.WriteLine("\n\nVierte Schleife:");
+
+            for (int z = 10; z > 0; z--)
+            {
+                Console.WriteLine(z);
+            }
+
+            //Eine Schleife, die potentiert
+
+            Console.WriteLine("\n\nFünfte Schleife:");
+
+            //Hiermit gebe ich dem Nutzer die Möglichkeit, die Länge der Schleife zu beeinflussen
+            Console.WriteLine("Wieviele Zahlen möchtest du?");
+            int count = Convert.ToInt32( Console.ReadLine() );
+            Console.WriteLine("Okay!\n");
+
+            for (int a = 1; a <=count; a++)
+            {
+                //variable "result" festlegen und definieren
+                //"Math"-funktion aufrufen, "Pow" für potentieren "by the POWER of i"
+                //zuerst die Nummer die potentiert werden soll, dann die potentierung, hier "a"
+                //"Math"-Funktion gibt double aus, deswegen result direkt als double festgelegt
+                double result = Math.Pow(2, a);
+                Console.WriteLine(result);
+            }
+
+            //Warten
+            Console.WriteLine("\nBitte drücke eine Taste um das Fenster zu schließen!");
+            Console.ReadKey();
+
+
+        }
+    }
+}
